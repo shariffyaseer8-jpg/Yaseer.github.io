@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 6 - HTML Forms</title>
 
     <style>
@@ -20,14 +22,9 @@
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
         }
 
-        h1 {
+        h1, h2 {
             text-align: center;
             color: #0f2027;
-        }
-
-        h2 {
-            color: #203a43;
-            margin-top: 30px;
         }
 
         label {
@@ -56,6 +53,22 @@
             background: #f8fbff;
             border-radius: 12px;
         }
+
+        button {
+            margin-top: 20px;
+            padding: 12px;
+            width: 100%;
+            background-color: #203a43;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0f2027;
+        }
     </style>
 </head>
 
@@ -63,22 +76,25 @@
 
 <div class="container">
 
-    <h2>Contact Form </h2>
+    <h2>Contact Form</h2>
+
     <div class="form-box">
-        <form>
-            <label>Name:</label>
-            <input type="text" value="Yaseer Shariff">
+        <form action="#" method="post">
 
-            <label>Email:</label>
-            <input type="email" value="shariffyaseer8@gmail.com">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Yaseer Shariff" required>
 
-            <label>Phone:</label>
-            <input type="tel" value="8431182742">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="shariffyaseer8@gmail.com" required>
 
-            <label>Message:</label>
-            <textarea>
-This form is created for practicing HTML forms. It includes basic input fields such as name, email, phone number, and message.
-            </textarea>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="8431182742">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="This form is created for practicing HTML forms. It includes basic input fields such as name, email, phone number, and message."></textarea>
+
+            <button type="submit">Submit</button>
+
         </form>
     </div>
 
@@ -86,4 +102,3 @@ This form is created for practicing HTML forms. It includes basic input fields s
 
 </body>
 </html>
-
