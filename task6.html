@@ -100,13 +100,19 @@
 
 </div>
 <script>
-    document.querySelector("form").addEventListener("submit", function (event) {
-        event.preventDefault(); // stop actual submission
-        alert("Form submitted successfully!");
-        this.reset(); // optional: clears the form
+    window.addEventListener("DOMContentLoaded", function () {
+        var form = document.querySelector("form");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // stops form submission
+            alert("Form submitted successfully!");
+            form.reset();
+        });
     });
 </script>
 
+
 </body>
 </html>
+
 
