@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Day 9 - Form</title>
+<style>
+body{font-family:Arial;background:#eef2f7;}
+form{
+    max-width:450px;
+    margin:90px auto;
+    background:white;
+    padding:30px;
+    border-radius:14px;
+}
+input,textarea,button{
+    width:100%;
+    padding:12px;
+    margin-top:12px;
+}
+button{
+    background:#059669;
+    color:white;
+    border:none;
+    border-radius:6px;
+}
+</style>
+<script>
+function submitted(){
+    alert("Successfully submitted!");
+}
+</script>
+</head>
+<body>
+
+<form onsubmit="submitted(); return false;">
+<h2>User Form</h2>
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<textarea placeholder="Your Message"></textarea>
+<button type="submit">Send</button>
+</form>
+
+</body>
+</html>
